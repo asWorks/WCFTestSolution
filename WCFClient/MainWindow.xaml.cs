@@ -34,7 +34,13 @@ namespace WCFClient
             using (ChannelFactory<IWCFServiceContract> factory = new ChannelFactory<IWCFServiceContract>("MyWCFClientHTTP"))
             {
 
+
+                //factory.Credentials.Windows.ClientCredential.UserName = "TestVMGuester\asWorks";
+                //factory.Credentials.Windows.ClientCredential.Password = "%%schieb2Dok123";
+
                 IWCFServiceContract proxy = factory.CreateChannel();
+
+
 
                 var ad = new LibServiceConfiguration.Contracts.Adress();
                 ad.PostalCode = "23879";
@@ -56,7 +62,7 @@ namespace WCFClient
             }
 
 
-               
+
         }
 
         private void SendAddress_Click(object sender, RoutedEventArgs e)
@@ -64,7 +70,16 @@ namespace WCFClient
             using (ChannelFactory<IWCFServiceContract> factory = new ChannelFactory<IWCFServiceContract>("MyWCFClientNetTcp"))
             {
 
+                //factory.Credentials.Windows.ClientCredential.UserName = "TestVMGuester\asWorks";
+                //factory.Credentials.Windows.ClientCredential.Password = "%%schieb2Dok123";
+
+                //var x = factory.Credentials.UserName;
+                //  x.UserName = "TestVMGuester\asWorks";
+                //  x.Password = "%%schieb2Dok123";
+
+
                 IWCFServiceContract proxy = factory.CreateChannel();
+
                 var ad = new LibServiceConfiguration.Contracts.Adress();
                 ad.PostalCode = "23879";
                 ad.Street = "Wasserkrüger Weg";

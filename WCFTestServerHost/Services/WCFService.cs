@@ -29,7 +29,7 @@ namespace LibServiceConfiguration.Services
 
         public string GetMessage()
         {
-            return "Hollo Meldung";
+            return "Hello Meldung";
         }
 
     }
